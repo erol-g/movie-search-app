@@ -50,7 +50,7 @@ const SearchPage = () => {
 
 	const handleLogout = () => {
 		localStorage.clear();
-		navigate("/");
+		navigate("/movie-search-app");
 	};
 
 	return (

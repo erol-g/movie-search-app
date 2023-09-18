@@ -32,7 +32,7 @@ const MovieDetailsPage = () => {
 	const handleLogout = () => {
 		localStorage.clear();
 		// window.location.reload();
-		navigate("/");
+		navigate("/movie-search-app");
 	};
 
 	return (
