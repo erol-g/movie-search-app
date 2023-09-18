@@ -1,0 +1,28 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+body {
+	background-color: rgb(159, 225, 225);
+	color: black;
+}
+
+.wrapper {
+	height: 100vh;
+}
+
+.login {
+	width: 50%;
+	height: min-content;
+	border-radius: 5px;
+	color: black;
+	background-color: rgb(114, 220, 195);
+	text-align: center;
+	padding: 20px;
+}
+
+.login button {
+	padding: 10px;
+	border: 3px groove black;
+}
