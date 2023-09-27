@@ -1,6 +1,6 @@
 {
 	"homepage": "https://erol-g.github.io/movie-search-app-login",
-	"name": "movie-search-app",
+	"name": "movie-search-app-login",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
