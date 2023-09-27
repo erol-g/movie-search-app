@@ -4,7 +4,7 @@
 	box-sizing: border-box;
 }
 body {
-	background-color: rgb(159, 225, 225);
+	background-color: rgb(187, 225, 225);
 	color: black;
 }
 
@@ -17,12 +17,17 @@ body {
 	height: min-content;
 	border-radius: 5px;
 	color: black;
-	background-color: rgb(114, 220, 195);
+	background-color: rgb(184, 216, 209);
 	text-align: center;
 	padding: 20px;
 }
 
 .login button {
 	padding: 10px;
-	border: 3px groove black;
+	border: 5px groove black;
+}
+
+input {
+	width: 10%;
+	text-align: center;
 }

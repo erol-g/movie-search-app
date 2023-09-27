@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.css";
 import { useParams, useNavigate } from "react-router-dom";
 
 const MovieDetailsPage = () => {
@@ -31,60 +31,51 @@ const MovieDetailsPage = () => {
 
 	const handleLogout = () => {
 		localStorage.clear();
-		// window.location.reload();
-		navigate("/movie-search-app");
+		navigate("/movie-search-app-login");
 	};
 
 	return (
-		<Container
-			style={{
-				border: "60px solid black",
-				backgroundColor: "white",
-				height: "66%",
-				textAlign: "center",
-				alignItems: "center",
-				justifyContent: "center",
-			}}
-		>
+		<div className="container main-wrapper text-center">
 			{movie ? (
-				<div>
-					<div
+				<div className=" fs-6 fw-lighter border border-black my-3 p-3 ">
+					<header>
+						<br />
+						<h1>
+							<strong>{movie.title}</strong>
+						</h1>
+					</header>
+					<h4>Overview</h4>
+					<p>{movie.overview}</p>
+					<h4>Vote Average (Rate):</h4>
+					<p>{movie.vote_average}</p>
+					<h4>Release Date: </h4>
+					<p>{movie.release_date}</p>
+					<img
+						src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+						alt={movie.title}
+						className="rounded "
 						style={{
-							backgroundColor: "grey",
-							color: "gold",
-							padding: "15px",
-							border: "3px dotted black",
+							width: "auto",
+							height: "auto",
+							margin: "auto",
+							border: "7px solid black",
 						}}
-					>
-						<h1>MOVIE DETAILS PAGE</h1>
-					</div>
-					<h1>{movie.title}</h1>
-					<Row style={{ padding: "10px" }}>
-						<Col md={5}>
-							<h3>Overview</h3>
-							<p>{movie.overview}</p>
-							<h3>Vote Average (Rate):</h3>
-							<p>{movie.vote_average}</p>
-							<h3>Release Date: </h3>
-							<p>{movie.release_date}</p>
-						</Col>
-						<Col>
-							<img
-								src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-								alt={movie.title}
-							/>
-						</Col>
-					</Row>
-					<div className="d-grid gap-2">
-						<Button variant="info" onClick={handleLogout} size="lg">
+					/>
+					<div className="m-5">
+						<button
+							className="btn btn-secondary w-50 rounded-pill border border-black"
+							variant="info"
+							onClick={handleLogout}
+							// onClick={() => navigate("/movie-search-app-login")}
+						>
 							Logout
-						</Button>
+						</button>
 					</div>
 				</div>
 			) : (
 				<p>Loading...</p>
 			)}
-		</Container>
+		</div>
 	);
 };
 
