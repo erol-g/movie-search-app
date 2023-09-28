@@ -38,17 +38,17 @@ const MovieDetailsPage = () => {
 		<div className=" bg-dark m-0 min-vh-100 d-flex flex-column align-items-center">
 			{movie ? (
 				<div className=" container p-3">
-					<div className="row text-white text-center align-items-center  p-2 m-2 w-100 h-auto">
-						<div className="details fw-lighter col-12 col-md-6 p-1 ">
+					<div className="row text-white text-center align-items-center  p-5">
+						<div className=" col-12 col-md-6 details p-2">
 							<header>
 								<h1 className="text-capitalize ">{movie.title}</h1>
 							</header>
 							<h4>Overview</h4>
 							<p>{movie.overview}</p>
 							<h4>Vote Average (Rate):</h4>
-							<p>{movie.vote_average}</p>
+							<h6>{Math.round(movie.vote_average)}</h6>
 							<h4>Release Date: </h4>
-							<p>{movie.release_date}</p>
+							<h6>{movie.release_date}</h6>
 							<div className="footer text-center mb-2">
 								<button
 									className="btn btn-primary w-auto rounded border border-black"
@@ -60,11 +60,12 @@ const MovieDetailsPage = () => {
 								</button>
 							</div>
 						</div>
+
 						<div className="col-12 col-md-6">
 							<img
 								src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
 								alt={movie.title}
-								className="rounded-circle p-3"
+								className="rounded m-2"
 							/>
 						</div>
 					</div>
