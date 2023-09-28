@@ -7,3 +7,30 @@ body {
 	background-color: rgb(213, 234, 234);
 	color: black;
 }
+
+header:hover {
+	background-color: rgb(45, 49, 49);
+}
+
+.search-result:hover {
+	cursor: pointer;
+	box-shadow: 0px 0px 44px;
+	transform: scale(1.1);
+}
+.rounded-circle:hover {
+	cursor: pointer;
+	box-shadow: 0px 0px 20px;
+}
+
+button:hover {
+	font-size: x-large;
+	border: 12px solid rgb(236, 194, 42);
+	color: black;
+	text-transform: uppercase;
+}
+
+.details:hover {
+	font-size: x-small;
+	border: 5px solid white;
+	padding: 30px;
+}

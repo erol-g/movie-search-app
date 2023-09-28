@@ -35,41 +35,38 @@ const MovieDetailsPage = () => {
 	};
 
 	return (
-		<div className="container main-wrapper text-center">
+		<div className=" bg-dark m-0 min-vh-100 d-flex flex-column align-items-center">
 			{movie ? (
-				<div className=" fs-6 fw-lighter border border-black my-3 p-3 ">
-					<header>
-						<br />
-						<h1>
-							<strong>{movie.title}</strong>
-						</h1>
-					</header>
-					<h4>Overview</h4>
-					<p>{movie.overview}</p>
-					<h4>Vote Average (Rate):</h4>
-					<p>{movie.vote_average}</p>
-					<h4>Release Date: </h4>
-					<p>{movie.release_date}</p>
-					<img
-						src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-						alt={movie.title}
-						className="rounded "
-						style={{
-							width: "auto",
-							height: "auto",
-							margin: "auto",
-							border: "7px solid black",
-						}}
-					/>
-					<div className="m-5">
-						<button
-							className="btn btn-secondary w-50 rounded-pill border border-black"
-							variant="info"
-							onClick={handleLogout}
-							// onClick={() => navigate("/movie-search-app-login")}
-						>
-							Logout
-						</button>
+				<div className=" container p-3">
+					<div className="row text-white text-center align-items-center  p-2 m-2 w-100 h-auto">
+						<div className="details fw-lighter col-12 col-md-6 p-1 ">
+							<header>
+								<h1 className="text-capitalize ">{movie.title}</h1>
+							</header>
+							<h4>Overview</h4>
+							<p>{movie.overview}</p>
+							<h4>Vote Average (Rate):</h4>
+							<p>{movie.vote_average}</p>
+							<h4>Release Date: </h4>
+							<p>{movie.release_date}</p>
+							<div className="footer text-center mb-2">
+								<button
+									className="btn btn-primary w-auto rounded border border-black"
+									variant="info"
+									onClick={handleLogout}
+									// onClick={() => navigate("/movie-search-app-login")}
+								>
+									Logout
+								</button>
+							</div>
+						</div>
+						<div className="col-12 col-md-6">
+							<img
+								src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+								alt={movie.title}
+								className="rounded-circle p-3"
+							/>
+						</div>
 					</div>
 				</div>
 			) : (

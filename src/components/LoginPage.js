@@ -24,17 +24,17 @@ function LoginPage() {
 			{loggedIn ? (
 				navigate("/search-page")
 			) : (
-				<div className=" wrapper bg-dark d-flex align-items-center justify-content-center w-100">
+				<div className=" main-wrapper bg-dark d-flex flex-column align-items-center min-vh-100 text-center p-5">
 					<div className="login ">
 						<h2 className="mb-3">Login Page</h2>
 						<form className="needs-validation">
-							<div className="form-group was-validated mb-2 w-20">
+							<div className="form-group was-validated mb-2 w-15">
 								<label htmlFor="email" className="form-label">
 									Email:
 								</label>
 								<input
 									required
-									className="form-control "
+									className="form-control text-center "
 									type="email"
 									value={email}
 									placeholder="example@example.com"
@@ -51,7 +51,7 @@ function LoginPage() {
 								</label>
 								<input
 									required
-									className="form-control"
+									className="form-control  text-center"
 									type="password"
 									value={password}
 									placeholder="*******"

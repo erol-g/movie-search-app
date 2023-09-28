@@ -6,16 +6,6 @@ import SearchPage from "./components/SearchPage";
 import MovieDetailsPage from "./components/MovieDetailsPage";
 import "./App.css";
 
-// const getMovies = async () => {
-// 	try {
-// 		const apiKey = "136c8f6b5677429e44585a4d845f7780";
-// 		fetch(`https://api.themoviedb.org/3/movie/550&api_key=${apiKey}`)
-// 			.then((res) => res.json())
-// 			.then((data) => data.result);
-// 	} catch (error) {
-// 		console.error("Error fetching search results:", error);
-// 	}
-// };
 const App = () => {
 	return (
 		<BrowserRouter>
